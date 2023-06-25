@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        
+function login()
+	{
+		var uname = document.getElementById("username").value;
+		var pwd = document.getElementById("password").value;
+		var filter = /^([a-zA-Z0-9_\.\-])/;
+		if(uname =='')
+		{
+			alert("please enter user name.");
+		}
+		else if(pwd=='')
+		{
+        	alert("enter the password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Enter valid user id.");
+		}
+		else if(pwd.length < 6 || pwd.length > 6)
+		{
+			alert("Password min and max length is 6.");
+		}
+		else if(uname=='harshith'&&pwd=="123456")
+		{
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location.href= "2ndwebpage.html";
+		}
+        else if(uname=='nithin'&&pwd=="nithin")
+		{
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location.href= "2ndwebpage.html";
+		}
+        else{
+            alert("enter valid username and password");
+        }
+	}
+    </script>
+</head>
+<body>
+    <div class="login-div">
+    <div class="logo">
+        <img src="download.jpg" alt="">
+    </div>
+    <div class="title"> MGNREGA ATTENDENCE </div>
+     <div class="sub-title">Made easy!</div>
+     <div class="fields">
+         <div class="username">
+              <input type="text" id="username" placeholder="Enter username"/>
+            </div>
+              <div class="password">
+                <input id="password" type="password" placeholder="Enter password"/>
+            </div>
+            <input type="submit" value="login" class="login-button" onClick="login()" />
+        </div>
+    </div>
+</body>
+</html>
